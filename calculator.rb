@@ -1,26 +1,37 @@
-def add(num1, num2)
-  num1 + num2
+class Calculator
+
+  attr_accessor :num1, :num2
+  
+  def initialize(num1,num2)
+    @num1 = num1
+    @num2 = num2
+  end
+
+  def add
+    @num1 + @num2
+  end
+  
+  def subtract
+    @num1 - @num2
+  end
+  
+  def multiply
+    @num1 * @num2
+  end
+  
+  def divide
+    @num1 / @num2
+  end
+  
+  def exponentiate
+    @num1 ** @num2
+  end
+  
+  def modulo
+    @num1 % @num2
+  end
 end
 
-def subtract(num1, num2)
-  num1 - num2
-end
-
-def multiply(num1, num2)
-  num1 * num2
-end
-
-def divide(num1, num2)
-  num1 / num2
-end
-
-def exponentiate(num1, num2)
-  num1 ** num2
-end
-
-def modulo(num1, num2)
-  num1 % num2
-end
 
 p "Enter num1"
 num1 = gets.chomp.to_i
@@ -28,9 +39,17 @@ num1 = gets.chomp.to_i
 p "Enter num2"
 num2 = gets.chomp.to_i
 
-puts "addition : #{ add(num1, num2) }"
-puts "subtraction : #{ subtract(num1, num2) }"
-puts "multiplication : #{ multiply(num1, num2) }"
-puts "division : #{ divide(num1, num2) }"
-puts "exponentiation : #{ exponentiate(num1, num2) }"
-puts "modulo : #{ modulo(num1, num2) }"
+# Object creation
+calc = Calculator.new(num1, num2)
+
+
+puts "Number1 : #{calc.num1}"
+puts "Number2 : #{calc.num2}"
+
+
+puts "addition : #{ calc.add }"
+puts "subtraction : #{ calc.subtract }"
+puts "multiplication : #{ calc.multiply }"
+puts "division : #{ calc.divide }"
+puts "exponentiation : #{ calc.exponentiate }"
+puts "modulo : #{ calc.modulo }"
