@@ -3,14 +3,10 @@ def substrings( word, dictionary)
   separated_words = word.split(" ")
   dictionary.each do |dict_word|
     separated_words.each do |sep_word|
-      if sep_word.include?(dict_word)
-        search_list[dict_word] += 1
-      end
+      search_list[dict_word] += 1 if sep_word.include?(dict_word)
     end
   end
-  search_list.each do |word, freq|
-    puts "#{word} : #{freq}"
-  end
+  search_list.each { |word, freq| puts "#{word} : #{freq}" }
 end
 
 
