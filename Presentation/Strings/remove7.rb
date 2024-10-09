@@ -1,15 +1,15 @@
-s1 = "Hello world\n"
+#  s1 = "Hello world"
 
-puts s1.chop
+#  puts s1.chop
 
-s2 = "Hello hi how are you world\n"
+#  s2 = "Hello hi how are you \n world hi"
 
-puts s2.chomp
+# #   puts s2.chomp
 
-puts s2.chomp("world")
+#  puts s2.chomp("world")
 
-#--------------------------------------------------
+# #--------------------------------------------------
 
-$/ = "\n"
+$/ = '\n'
 s = gets   
 puts s 

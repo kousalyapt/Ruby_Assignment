@@ -8,7 +8,7 @@ puts s.object_id
 
 
 
-s.capitalize!
+s = s.capitalize
 
 puts s
 
