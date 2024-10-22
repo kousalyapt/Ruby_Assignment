@@ -6,7 +6,7 @@ def create_large_csv_file_by_rows(file_path, total_rows)
 
   File.open(file_path, 'w') do |file|
     
-    file.puts("ID,Name,Age,Email,Date")
+    file.puts("ID,Name,Date")
 
     id = 1
     start_time = Time.now
@@ -14,7 +14,7 @@ def create_large_csv_file_by_rows(file_path, total_rows)
       
       random_date = Date.today - rand(1..365)
     
-      file.puts("#{id},Name_#{id},#{rand(18..65)},email_#{id}@example.com,#{random_date}")
+      file.puts("#{id},Name_#{id},#{random_date}")
       id += 1
     end
     end_time  = Time.now
@@ -27,5 +27,6 @@ end
 create_large_csv_file_by_rows('large_file.csv', 5_000_000)
 
 
-#18.083984 secs
-#18.083984 secs
+41.7688381 secs
+
+
