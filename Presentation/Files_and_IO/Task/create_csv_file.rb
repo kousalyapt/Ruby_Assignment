@@ -27,6 +27,6 @@ end
 create_large_csv_file_by_rows('large_file.csv', 5_000_000)
 
 
-#41.7688381 secs
+
 
 
